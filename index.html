@@ -16,7 +16,47 @@
         <button onclick="fnPrompt()" class="button">Prompt</button>
         <button onclick="fnSuma()" class="button">Suma</button>
     </main>
-    <p></p>
+    <section class="secciones">
+        <h2 class="h2IMC">Indice de masa corporal</h2>
+        <input id="pesoIMC" type="number" name="pesoIMC"  placeholder="peso en kilogramos">
+        <input id="alturaIMC" type="number" name="alturaIMC" 
+        placeholder="altura en metros">
+        <button onclick="calcularIMC()" class="button">Calcular</button>
+        <p class="resultadoIMC"></p>
+    </section>
+    <section class="secciones">
+        <h2 class="factorial__title">Factorial</h2>
+        <input type="number" name="" id="numeroACalcularFactorial" placeholder="Ingrese un número entero positivo">
+        <button onclick="calcularFactorial()" class="button">Factorial</button>
+        <p class="factorial__resultado"></p>
+    </section>
+    <section class="secciones">
+        <h2 class="divisas__title">Conversor de Divisas</h2>
+        <input type="number" name="" id="divisas__input" placeholder="Ingrese un número entero positivo">
+        <button onclick="calcularDivisa()" class="button">Convertir</button>
+        <p class="divisas__resultado"></p>
+    </section>
+    <section class="secciones">
+        <h2 class="area__title">Área y perímetro de un rectángulo</h2>
+        <input type="number" name="" id="area__base" placeholder="Ingrese un número entero positivo">
+        <input type="number" name="" id="area__altura" placeholder="Ingrese un número entero positivo">
+        <button onclick="calcularAreaYPerimetro()" class="button">Calcular</button>
+        <p class="area__resultado_area"></p>
+        <p class="area__resultado_perimetro"></p>
+    </section>
+    <section class="secciones">
+        <h2 class="area__title">Área y perímetro de un círculo</h2>
+        <input type="number" name="" id="area__radio" placeholder="Ingrese un número entero positivo">
+        <button onclick="calcularAreaYPerimetro_circulo()" class="button">Calcular</button>
+        <p class="area__resultado_area_circulo"></p>
+        <p class="area__resultado_perimetro_circulo"></p>
+    </section>
+    <section class="secciones">
+        <h2 class="tabla__title">Tabla de multiplicar</h2>
+        <input type="number" name="" id="tabla__input" placeholder="Ingrese un número entero positivo">
+        <button onclick="generarTablaDeMultiplicar()" class="button">Calcular</button>
+        <p class="tabla__resultado"></p>
+    </section>
       <script src="app.js"></script>
 </body>
 </html>

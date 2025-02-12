@@ -32,3 +32,30 @@ main, html {
 .button:hover {
   background-color: #2980b9;
 }
+
+.h2IMC, .resultadoIMC, 
+.factorial__title,
+.factorial__resultado,
+.divisas__title,
+.divisas__resultado,
+.area__title,
+.area__resultado {
+  color: #279EFF;
+  text-align: center;
+}
+
+#pesoIMC,
+#alturaIMC,
+#numeroACalcularFactorial {
+  padding: 10px;
+}
+.secciones {
+  display: flex;
+}
+input {
+  text-align: center;
+  height: 3rem;
+  color:lightblue;
+  background: navy;
+  font-size: 1rem;
+}
