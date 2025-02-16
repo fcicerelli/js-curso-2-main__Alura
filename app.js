@@ -137,3 +137,35 @@ function generarTablaDeMultiplicar() {
   }
   tabla__resultado.innerHTML = tabla;
 }
+
+/* Lista vacía */
+
+let listaGenerica = [];
+
+/* Lista de lenguajes de programación */
+
+let lenguajesDeProgramacion = ['JavaScript','C','C++','Kotlin','Python'];
+
+lenguajesDeProgramacion.push('Java','Ruby','GoLang');
+
+let tablaLenguajesDeProgramacion = document.getElementById('tablaLenguajesDeProgramacion');
+let tablaHTML = '';
+for (let i = 0; i < lenguajesDeProgramacion.length; i++) {
+  tablaHTML += `<tr>
+                  <td>${lenguajesDeProgramacion[i]}</td>
+                </tr>`;
+}
+tablaLenguajesDeProgramacion.innerHTML = tablaHTML;
+
+/* Lista de lenguajes de programación (orden inverso)*/
+
+let tablaLenguajesDeProgramacionOrdenInverso = document.getElementById('tablaLenguajesDeProgramacionOrdenInverso');
+let tablaHTMLOrdenInverso = '';
+for (let i = lenguajesDeProgramacion.length - 1; i >= 0; i--) {
+  tablaHTMLOrdenInverso += `<tr>
+                              <td>${lenguajesDeProgramacion[i]}</td>
+                            </tr>`;
+}
+tablaLenguajesDeProgramacionOrdenInverso.innerHTML = tablaHTMLOrdenInverso;
+
+
