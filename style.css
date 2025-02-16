@@ -1,6 +1,6 @@
 header,p {
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   color: #279EFF;
 }
 
@@ -39,7 +39,8 @@ main, html {
 .divisas__title,
 .divisas__resultado,
 .area__title,
-.area__resultado {
+.area__resultado,
+.tabla__title {
   color: #279EFF;
   text-align: center;
 }

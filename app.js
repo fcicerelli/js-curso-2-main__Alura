@@ -168,4 +168,116 @@ for (let i = lenguajesDeProgramacion.length - 1; i >= 0; i--) {
 }
 tablaLenguajesDeProgramacionOrdenInverso.innerHTML = tablaHTMLOrdenInverso;
 
+/* promedio lista de números */
 
+let listaDeNumeros = [25,30,15,77,34,93,5,86];
+
+let tablaNumerosVector = document.getElementById('tablaNumerosVector');
+
+function listarNumeros(lista) {
+  let tablaNumeros = "";
+  for (let i = lista.length - 1; i >= 0; i--) {
+    tablaNumeros += `<tr>
+                                <td>${lista[i]}</td>
+                              </tr>`;
+  }
+  tablaNumerosVector.innerHTML = tablaNumeros;
+}
+
+listarNumeros(listaDeNumeros);
+
+let promedioLista = document.getElementById('promedio')
+function carcularPromedio(lista) {
+  let sum = 0;
+  for(let i = 0; i< lista.length; i++) {
+    sum += lista[i];
+  }
+  let resultado = sum / lista.length;
+  return resultado;
+}
+
+promedioLista.innerHTML = `El promedio es ${carcularPromedio(listaDeNumeros)}`;
+
+/* número más grande y más chico de una lista */
+
+let elMenor = document.getElementById('menor')
+let elMayorEs = document.getElementById('mayor')
+
+function calcularMayorYMenor(lista) {
+  let mayor = 0;
+  let menor = 99999999999999999999999999;
+  for (let i = 0; i < lista.length; i++) {
+    lista[i] > mayor ? mayor = lista[i] : '';
+    lista[i] < menor ? menor = lista[i] : '';
+  }
+  return [mayor,menor];
+}
+let mayorMenor = calcularMayorYMenor(listaDeNumeros);
+elMenor.innerHTML = `El número menor de la lista es ${mayorMenor[1]}`;
+elMayorEs.innerHTML = `El número mayor de la lista es ${mayorMenor[0]}`;
+/* console.log(`El número mayor de la lista es ${mayorMenor[0]} y número menor de la lista es ${mayorMenor[1]}`); */
+
+/* Suma de todos los elementos de una lista */
+
+let sumar = document.getElementById('sumar');
+
+function sumarElementosLista(lista) {
+  let suma = 0;
+  for (let elemento of lista) {
+    suma += elemento;
+  }
+  sumar.innerHTML = `<tr>
+                      <td>Suma: ${suma}</td>
+                    </tr>`;
+}
+sumarElementosLista(listaDeNumeros);
+
+function getPosicionElemento(elemento) {
+  let posicion = listaDeNumeros.indexOf(elemento);
+  return posicion;
+}
+console.log("posicion:",getPosicionElemento(99));
+
+let lista1 = [8,9,6,8,5,1,7,3];
+let lista2 = [45,0,6,4,2,9,11,6];
+let tablaSumaDeListas = document.getElementById('tablaSumaDeListas');
+
+function sumarDosListas(listaA,listaB) {
+  let resultado = [];
+  let tresTablas = '';
+  if (listaA.length == listaB.length) {
+    for (let i = 0; i< listaA.length; i++) {
+      resultado.push(listaA[i] + listaB[i]);
+      tresTablas += `
+        <tr>
+          <td>${listaA[i]}</td>
+          <td>${listaB[i]}</td>
+          <td>${resultado[i]}</td>
+        </tr>`;
+    }
+    tablaSumaDeListas.innerHTML = tresTablas;
+    // return resultado;
+  } else {
+    return alert('No se puenden sumar las listas porque tienen distinta cantidad de elementos');
+  }
+}
+
+sumarDosListas(lista1,lista2);
+
+let tablaListaAlCuadrado = document.getElementById('tablaListaAlCuadrado');
+
+function listaAlCuadrado(lista) {
+  let tablaCuadrado = '';
+  let listaCuadrada = [];
+  for (let i = 0;i < lista.length; i++) {
+    listaCuadrada.push(lista[i] ** 2);
+    tablaCuadrado += `
+        <tr>
+          <td>${lista[i]}</td>
+          <td>${listaCuadrada[i]}</td>
+        </tr>
+    `;
+  }
+  tablaListaAlCuadrado.innerHTML = tablaCuadrado;
+}
+listaAlCuadrado(listaDeNumeros);
